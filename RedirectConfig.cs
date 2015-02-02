@@ -22,7 +22,7 @@ namespace Redirect
         public string ExpiredInfo { get; private set; }
 
         //到期前的提示文案，如果提示文案为空，直接跳转
-        //可以使用日期变量[ExpireDate[，如“域名将在[ExpireDate]停止提供跳转，请记录新域名”
+        //可以使用日期变量[ExpiredDate]，如“域名将在[ExpiredDate]停止提供跳转，请记录新域名”
         public string WarningInfo { get; private set; }
 
         //跳转的时候是否保持url中域名之后的部分
@@ -54,7 +54,7 @@ namespace Redirect
                 ExpiredInfo = conf.ExpiredInfo;
 
             if (!string.IsNullOrEmpty(conf.WarningInfo))
-                WarningInfo = conf.WarningInfo.Replace("[ExpireDate]", conf.ExpiredDate);
+                WarningInfo = conf.WarningInfo.Replace("[ExpiredDate]", conf.ExpiredDate);
         }
     }
 
@@ -138,7 +138,7 @@ namespace Redirect
         }
 
         //到期前的提示文案，如果提示文案为空，直接跳转
-        //可以使用日期变量[ExpireDate]，如“域名将在[ExpireDate]停止提供跳转，请记录新域名”
+        //可以使用日期变量[ExpiredDate]，如“域名将在[ExpiredDate]停止提供跳转，请记录新域名”
         //非必要
         [ConfigurationProperty("WarningInfo", IsRequired = false)]
         public string WarningInfo
