@@ -3,3 +3,6 @@
 /*.suo
 /obj/Debug
 /obj/Release
+/bin/*.config
+/bin/*.pdb
+/bin/*.dll
