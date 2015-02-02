@@ -1,0 +1,5 @@
+/Properties/PublishProfiles
+/*.user
+/*.suo
+/obj/Debug
+/obj/Release
